@@ -124,8 +124,7 @@ export default function Dashboard() {
               {watchlist.map(w => {
                 const q = quotes[w.symbol];
                 return (
-                  <div key={w.symbol} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 0', borderBottom: '1px solid var(--border)' }}
-                    onClick={() => navigate('/trade')} style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 0', borderBottom: '1px solid var(--border)' }}>
+                  <div key={w.symbol} onClick={() => navigate('/trade')} style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 0', borderBottom: '1px solid var(--border)' }}>
                     <div>
                       <div style={{ fontWeight: 600, fontSize: 13 }}>{w.symbol.replace('.NS','').replace('.BO','')}</div>
                       <div style={{ fontSize: 11, color: 'var(--txt2)' }}>{w.company_name}</div>
